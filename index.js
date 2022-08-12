@@ -5,8 +5,8 @@ const http = require('http');
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
-app.use(express.static(path.join(__dirname, '../public')));
-console.log(path.join(__dirname, '../public'));
+app.use(express.static(path.join(__dirname, './public')));
+console.log(path.join(__dirname, './public'));
 const users = {};
 io.on('connection', socket=>{
     socket.on('new-user-joined', name=>{
