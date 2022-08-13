@@ -21,7 +21,7 @@ io.on('connection', socket=>{
         delete users[socket.id];
     })
 })
-const port = 3000 || process.env.port;
+const port = "3000" || process.env.port;
 server.listen(port, () => {
   console.log(`Server running on port: ${port}`);
 })
